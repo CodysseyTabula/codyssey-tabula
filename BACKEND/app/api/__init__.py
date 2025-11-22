@@ -1,2 +1,2 @@
-"""API routes package"""
+"""API 라우트 패키지"""
 

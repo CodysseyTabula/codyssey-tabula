@@ -1,4 +1,4 @@
-"""FastAPI application entry point for IEP Planning Support Service"""
+"""IEP 계획 지원 서비스의 FastAPI 애플리케이션 진입점"""
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -8,7 +8,7 @@ app = FastAPI(
     version="0.1.0",
 )
 
-# CORS middleware for React frontend development
+# React 프런트엔드 개발을 위한 CORS 미들웨어
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[

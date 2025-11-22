@@ -1,2 +1,2 @@
-"""Database configuration and session management"""
+"""데이터베이스 설정 및 세션 관리"""
 

@@ -1,2 +1,2 @@
-"""Business logic and domain services"""
+"""비즈니스 로직 및 도메인 서비스"""
 

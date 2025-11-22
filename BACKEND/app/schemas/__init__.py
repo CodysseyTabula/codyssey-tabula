@@ -1,2 +1,2 @@
-"""Pydantic schemas for request/response validation"""
+"""요청/응답 검증을 위한 Pydantic 스키마"""
 

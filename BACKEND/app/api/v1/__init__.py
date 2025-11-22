@@ -1,2 +1,2 @@
-"""API v1 routes"""
+"""API v1 라우트"""
 
