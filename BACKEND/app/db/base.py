@@ -15,3 +15,8 @@ class Base(DeclarativeBase):
     """
     pass
 
+
+# Import all models here to register them with Base.metadata
+from app.models.student import Student  # noqa: E402, F401
+from app.models.student_wechler import StudentWechsler  # noqa: E402, F401
+
