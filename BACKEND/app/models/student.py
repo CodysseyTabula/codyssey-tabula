@@ -5,7 +5,7 @@ from datetime import date
 from typing import TYPE_CHECKING
 
 from sqlalchemy import String, Date, Integer
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base
 
@@ -25,4 +25,15 @@ class Student(Base):
     cognitive_level: Mapped[int | None] = mapped_column(Integer, nullable=True)
     social_psych_level: Mapped[int | None] = mapped_column(Integer, nullable=True)
     motor_daily_level: Mapped[int | None] = mapped_column(Integer, nullable=True)
+
+    # Relationships
+    wechsler: Mapped["StudentWechsler | None"] = relationship(
+        back_populates="student",
+        uselist=False,
+        cascade="all, delete-orphan",
+    )
+    ieps: Mapped[list["IEP"]] = relationship(
+        back_populates="student",
+        cascade="all, delete-orphan",
+    )
 

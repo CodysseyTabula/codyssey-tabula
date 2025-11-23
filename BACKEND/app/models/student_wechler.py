@@ -4,7 +4,7 @@ import uuid
 from typing import TYPE_CHECKING
 
 from sqlalchemy import ForeignKey, Integer
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base
 
@@ -23,4 +23,9 @@ class StudentWechsler(Base):
     wmi_score: Mapped[int | None] = mapped_column(Integer, nullable=True)
     psi_score: Mapped[int | None] = mapped_column(Integer, nullable=True)
     fsiq_score: Mapped[int | None] = mapped_column(Integer, nullable=True)
+
+    # Relationships
+    student: Mapped["Student"] = relationship(
+        back_populates="wechsler",
+    )
 
